@@ -19,6 +19,13 @@ const ciscoSlice = createSlice({
 	}
 });
 
+// Interface
+export interface CiscoSliceModel {
+	cisco:{
+		isTouch:boolean;
+	};
+};
+
 // Actions exports
 export const { setIsTouch } = ciscoSlice.actions;
 

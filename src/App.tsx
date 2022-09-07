@@ -2,24 +2,18 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setIsTouch } from "./store/features/ciscoSlice";
+import { CiscoSliceModel } from "./store/features/ciscoSlice";
 import "./css/displayMain.css";
 import LogoAnime from "./components/LogoAnime";
 
 // Modernizr
 const Modernizr = (window as any).Modernizr;
 
-// Store interface
-interface Store {
-	cisco:{
-		isTouch:boolean;
-	};
-};
-
 // Component
 const App = () => {
 
 	// Store
-	const { isTouch } = useSelector((store:Store) => { return store.cisco });
+	const { isTouch } = useSelector((store:CiscoSliceModel) => { return store.cisco });
 
 	// Dispatch
 	const dispatch = useDispatch();
